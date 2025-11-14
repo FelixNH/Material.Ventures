@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MATERIA</title>
+  <meta name="description" content="MATERIA Venture Capital - Investing in innovations reshaping how the world is built" />
+  <title>MATERIA - Venture Capital</title>
   <style>
     :root {
-      --bg: #f2f2f3;          /* helles neutral-grau */
-      --fg: #111111;          /* fast-schwarzer Text */
-      --muted: #555555;       /* graue Sub-Textfarbe */
-      --accent: #b28b30;      /* etwas gedeckter Goldton */
+      --bg: #f2f2f3;
+      --fg: #111111;
+      --muted: #555555;
+      --accent: #b28b30;
       --accent-soft: rgba(178, 139, 48, 0.16);
       --border-subtle: #d2d2d4;
       --border-strong: #b3b3b5;
       --radius-card: 20px;
       --max-width: 1040px;
-}
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     html, body {
@@ -27,16 +33,21 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, -apple-system, "SF Pro Text", sans-serif;
-      background: #f2f2f3 !important; /* direktes hellgrau, ohne Variable */
-      color: #111111 !important;      /* dunkler Text */
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
       -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
     }
 
     .page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+    }
+
+    main {
+      flex: 1;
     }
 
     .shell {
@@ -47,15 +58,12 @@
     }
 
     /* HEADER / NAV */
-
     header {
       position: sticky;
       top: 0;
       z-index: 20;
       backdrop-filter: blur(16px);
-      background:
-        radial-gradient(circle at 0 0, rgba(0,0,0,0.03), transparent 55%),
-        rgba(255,255,255,0.9);
+      background: radial-gradient(circle at 0 0, rgba(0,0,0,0.03), transparent 55%), rgba(255,255,255,0.9);
       border-bottom: 1px solid var(--border-subtle);
     }
 
@@ -78,18 +86,23 @@
     .logo-mark {
       width: 26px;
       height: 26px;
-      border-radius: 999px;
+      border-radius: 50%;
       border: 1px solid rgba(255,255,255,0.08);
       background: radial-gradient(circle at 30% 0, #f8e8b2, #8a6e36 40%, #12131a 78%);
-      box-shadow:
-        0 0 0 1px rgba(0,0,0,0.55),
-        0 12px 30px rgba(0,0,0,0.7);
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.55), 0 12px 30px rgba(0,0,0,0.7);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
     }
 
     .logo-line-main {
       font-size: 0.9rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
+      font-weight: 600;
     }
 
     .logo-line-sub {
@@ -111,10 +124,13 @@
       text-transform: uppercase;
       letter-spacing: 0.14em;
       font-size: 0.7rem;
+      transition: color 0.2s ease;
     }
 
-    .nav-link:hover {
+    .nav-link:hover,
+    .nav-link:focus {
       color: var(--fg);
+      outline: none;
     }
 
     .nav-cta {
@@ -131,14 +147,16 @@
       align-items: center;
       gap: 8px;
       white-space: nowrap;
+      transition: background 0.2s ease;
     }
 
-    .nav-cta:hover {
-      background: rgba(255,255,255,0.04);
+    .nav-cta:hover,
+    .nav-cta:focus {
+      background: rgba(0,0,0,0.04);
+      outline: none;
     }
 
     /* HERO */
-
     .hero {
       padding-top: 72px;
       padding-bottom: 72px;
@@ -161,7 +179,7 @@
       line-height: 1.05;
       max-width: 22ch;
       letter-spacing: 0.02em;
-      font-weight: 500;     
+      font-weight: 500;
     }
 
     .hero-sub {
@@ -196,6 +214,8 @@
       text-transform: uppercase;
       letter-spacing: 0.14em;
       white-space: nowrap;
+      transition: all 0.2s ease;
+      font-family: inherit;
     }
 
     .btn-primary {
@@ -204,20 +224,26 @@
       border-color: #111111;
     }
 
-    .btn-primary:hover {
+    .btn-primary:hover,
+    .btn-primary:focus {
       background: #f3f3f3;
       border-color: #111111;
+      outline: none;
+      transform: translateY(-1px);
     }
 
     .btn-secondary {
       border-color: var(--border-strong);
       color: var(--muted);
-      background: rgba(255,255,255,0.01);
+      background: rgba(255,255,255,0.6);
     }
 
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.26);
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      border-color: var(--fg);
       color: var(--fg);
+      background: rgba(255,255,255,0.9);
+      outline: none;
     }
 
     .hero-note {
@@ -226,7 +252,6 @@
     }
 
     /* GENERIC SECTIONS */
-
     section {
       padding: 64px 0;
       border-top: 1px solid var(--border-subtle);
@@ -251,6 +276,7 @@
     .section-title {
       font-size: 1.6rem;
       margin-bottom: 6px;
+      font-weight: 600;
     }
 
     .section-intro {
@@ -266,7 +292,6 @@
     }
 
     /* WHO WE ARE */
-
     .who-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -296,6 +321,8 @@
 
     .who-side strong {
       color: var(--fg);
+      display: block;
+      margin-bottom: 8px;
     }
 
     .who-pills {
@@ -311,17 +338,17 @@
       padding: 5px 10px;
       font-size: 0.78rem;
       color: var(--muted);
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.02);
     }
 
     .pill-strong {
       border-color: var(--accent);
       color: var(--accent);
       background: var(--accent-soft);
+      font-weight: 500;
     }
 
     /* WHAT WE LOOK FOR */
-
     .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -334,6 +361,12 @@
       padding: 16px 16px 14px;
       background: #ffffff;
       box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
     }
 
     .card-tag {
@@ -349,6 +382,7 @@
       text-transform: uppercase;
       letter-spacing: 0.14em;
       margin-bottom: 8px;
+      font-weight: 600;
     }
 
     .card p {
@@ -358,10 +392,9 @@
     }
 
     /* WHAT WE DO */
-
     .two-col {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 26px;
     }
 
@@ -378,7 +411,13 @@
       padding: 10px 12px 8px;
       background: #ffffff;
       box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-}
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .list-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
 
     .list-label {
       font-size: 0.76rem;
@@ -391,6 +430,7 @@
     .list-title {
       font-size: 0.9rem;
       margin-bottom: 4px;
+      font-weight: 600;
     }
 
     .list-body {
@@ -400,7 +440,6 @@
     }
 
     /* JOIN / CTA */
-
     .join-layout {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -416,7 +455,14 @@
       flex-direction: column;
       gap: 10px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .join-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
     .join-label {
       font-size: 0.78rem;
       text-transform: uppercase;
@@ -426,6 +472,7 @@
 
     .join-title {
       font-size: 1.05rem;
+      font-weight: 600;
     }
 
     .join-text {
@@ -440,9 +487,8 @@
     }
 
     /* FOOTER */
-
     footer {
-      border-top: 1px solid rgba(255,255,255,0.04);
+      border-top: 1px solid var(--border-subtle);
       padding: 18px 0 22px;
       font-size: 0.78rem;
       color: var(--muted);
@@ -468,15 +514,17 @@
     .footer-links a {
       color: var(--muted);
       text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    .footer-links a:hover {
+    .footer-links a:hover,
+    .footer-links a:focus {
       color: var(--fg);
       text-decoration: underline;
+      outline: none;
     }
 
     /* RESPONSIVE */
-
     @media (max-width: 880px) {
       .who-layout,
       .two-col,
@@ -509,23 +557,38 @@
       .hero {
         padding-top: 40px;
       }
+
+      .hero-headline {
+        font-size: 2rem;
+      }
     }
 
-    /* Hard override for primary hero button */
-a.btn.btn-primary {
-  background: #ffffff !important;
-  color: #111111 !important;
-  border-color: #111111 !important;
-}
+    /* Skip to content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--fg);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <div class="page">
     <header>
-      <nav class="nav">
+      <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-left">
           <div class="logo-mark" aria-hidden="true"></div>
-          <div>
+          <div class="logo-text">
             <div class="logo-line-main">MATERIA</div>
             <div class="logo-line-sub">Venture Capital</div>
           </div>
@@ -540,7 +603,7 @@ a.btn.btn-primary {
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <div class="shell">
         <!-- HERO -->
         <section class="hero">
@@ -730,9 +793,9 @@ a.btn.btn-primary {
       <div class="footer-inner">
         <span>&copy; <span id="year"></span> MATERIA.</span>
         <div class="footer-links">
-          <a href="#">Privacy</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Imprint</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#accessibility">Accessibility</a>
+          <a href="#imprint">Imprint</a>
         </div>
       </div>
     </footer>
