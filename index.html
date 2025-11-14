@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="MINA Partners - Investing in innovations reshaping how the world is built" />
-  <title>MINA - Partners</title>
+  <title>MINA Partners</title>
   <style>
     :root {
       --bg: #f2f2f3;
@@ -15,7 +15,7 @@
       --border-subtle: #d2d2d4;
       --border-strong: #b3b3b5;
       --radius-card: 20px;
-      --max-width: 1040px;
+      --max-width: 900px;
     }
 
     * {
@@ -37,7 +37,7 @@
       background: var(--bg);
       color: var(--fg);
       -webkit-font-smoothing: antialiased;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .page {
@@ -54,7 +54,7 @@
       width: 100%;
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 0 24px 100px;
     }
 
     /* HEADER / NAV */
@@ -63,14 +63,14 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(16px);
-      background: radial-gradient(circle at 0 0, rgba(0,0,0,0.03), transparent 55%), rgba(255,255,255,0.9);
+      background: rgba(242, 242, 243, 0.95);
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 14px 20px;
+      padding: 20px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -80,12 +80,12 @@
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .logo-mark {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       border: 2px solid var(--accent);
       background: var(--accent);
@@ -98,8 +98,8 @@
     }
 
     .logo-line-main {
-      font-size: 0.9rem;
-      letter-spacing: 0.16em;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       font-weight: 600;
     }
@@ -107,36 +107,14 @@
     .logo-line-sub {
       font-size: 0.75rem;
       color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 0.82rem;
-    }
-
-    .nav-link {
-      text-decoration: none;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.7rem;
-      transition: color 0.2s ease;
-    }
-
-    .nav-link:hover,
-    .nav-link:focus {
-      color: var(--fg);
-      outline: none;
+      margin-top: 1px;
     }
 
     .nav-cta {
-      font-size: 0.76rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      padding: 7px 14px;
+      letter-spacing: 0.12em;
+      padding: 8px 18px;
       border-radius: 999px;
       border: 1px solid var(--fg);
       background: transparent;
@@ -146,64 +124,250 @@
       align-items: center;
       gap: 8px;
       white-space: nowrap;
-      transition: background 0.2s ease;
+      transition: all 0.2s ease;
     }
 
     .nav-cta:hover,
     .nav-cta:focus {
-      background: rgba(0,0,0,0.04);
+      background: var(--fg);
+      color: var(--bg);
       outline: none;
     }
 
     /* HERO */
     .hero {
-      padding-top: 72px;
-      padding-bottom: 72px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 80px;
       text-align: center;
-      gap: 24px;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--muted);
     }
 
     .hero-headline {
-      font-size: clamp(2.4rem, 4.2vw, 3.1rem);
-      line-height: 1.05;
-      max-width: 22ch;
-      letter-spacing: 0.02em;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      max-width: 18ch;
+      letter-spacing: -0.02em;
       font-weight: 500;
+      margin: 0 auto 28px;
     }
 
     .hero-sub {
-      font-size: 0.98rem;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      line-height: 1.65;
       color: var(--muted);
-      max-width: 36rem;
+      max-width: 32rem;
+      margin: 0 auto;
     }
 
-    .hero-sub span {
-      display: block;
-      margin-top: 4px;
-    }
-
-    .hero-ctas {
+    /* FULL WIDTH IMAGE */
+    .full-image-section {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      height: 85vh;
+      min-height: 600px;
+      background: linear-gradient(135deg, #c5c5c5 0%, #8a8a8a 100%);
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 10px;
+      position: relative;
+    }
+
+    .full-image-section::after {
+      content: 'Image Placeholder';
+      position: absolute;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* TEXT BLOCK AFTER IMAGE */
+    .text-block {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .text-block-content {
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+
+    .text-block-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      line-height: 1.2;
+      margin-bottom: 24px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .text-block-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      line-height: 1.3;
+      margin-bottom: 24px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .section-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 42rem;
+    }
+
+    .section-text p + p {
+      margin-top: 20px;
+    }
+
+    /* WHAT WE BELIEVE IN */
+    .believe-section-content {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .believe-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .believe-intro {
+      margin: 0;
+    }
+
+    .believe-grid {
+      display: grid;
+      gap: 48px;
+    }
+
+    .believe-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .believe-item p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .believe-image {
+      width: 240px;
+      height: 320px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+      object-fit: cover;
+    }
+
+    /* WHO WE ARE */
+    .who-section-content {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .who-image {
+      width: 240px;
+      height: 320px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+      object-fit: cover;
+    }
+
+    .who-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .who-intro {
+      margin: 0;
+    }
+
+    .who-main {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .who-main p + p {
+      margin-top: 20px;
+    }
+
+    /* WHAT WE LOOK FOR */
+    .look-grid {
+      display: grid;
+      gap: 48px;
+      margin-top: 48px;
+    }
+
+    .look-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .look-image {
+      width: 140px;
+      height: 180px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #d5d5d5 0%, #b5b5b5 100%);
+      object-fit: cover;
+    }
+
+    .look-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .look-content p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* JOIN / CTA */
+    .join-content {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .join-cta-wrapper {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .btn {
       border-radius: 999px;
-      padding: 11px 20px;
-      font-size: 0.86rem;
+      padding: 12px 24px;
+      font-size: 0.9rem;
       border: 1px solid transparent;
       text-decoration: none;
       display: inline-flex;
@@ -211,302 +375,61 @@
       gap: 8px;
       cursor: pointer;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       white-space: nowrap;
       transition: all 0.2s ease;
       font-family: inherit;
     }
 
     .btn-primary {
-      background: #ffffff;
-      color: #111111;
-      border-color: #111111;
+      background: var(--fg);
+      color: var(--bg);
+      border-color: var(--fg);
     }
 
     .btn-primary:hover,
     .btn-primary:focus {
-      background: #f3f3f3;
-      border-color: #111111;
+      background: transparent;
+      color: var(--fg);
       outline: none;
-      transform: translateY(-1px);
     }
 
     .btn-secondary {
       border-color: var(--border-strong);
-      color: var(--muted);
-      background: rgba(255,255,255,0.6);
+      color: var(--fg);
+      background: transparent;
     }
 
     .btn-secondary:hover,
     .btn-secondary:focus {
       border-color: var(--fg);
-      color: var(--fg);
-      background: rgba(255,255,255,0.9);
+      background: var(--fg);
+      color: var(--bg);
       outline: none;
-    }
-
-    .hero-note {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    /* GENERIC SECTIONS */
-    section {
-      padding: 64px 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .section-header {
-      max-width: var(--max-width);
-      margin: 0 auto 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .section-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 1.6rem;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    .section-intro {
-      font-size: 0.94rem;
-      line-height: 1.8;
-      color: var(--muted);
-      max-width: 34rem;
-    }
-
-    .section-body {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-
-    /* WHO WE ARE */
-    .who-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 30px;
-      align-items: flex-start;
-    }
-
-    .who-main {
-      font-size: 0.98rem;
-      line-height: 1.9;
-      color: var(--muted);
-    }
-
-    .who-main p + p {
-      margin-top: 14px;
-    }
-
-    .who-side {
-      border-radius: var(--radius-card);
-      border: 1px solid var(--border-subtle);
-      padding: 18px 18px 16px;
-      background: #ffffff;
-      font-size: 0.86rem;
-      color: var(--muted);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-    }
-
-    .who-side strong {
-      color: var(--fg);
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .who-pills {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      border: 1px solid var(--border-subtle);
-      padding: 5px 10px;
-      font-size: 0.78rem;
-      color: var(--muted);
-      background: rgba(0,0,0,0.02);
-    }
-
-    .pill-strong {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-soft);
-      font-weight: 500;
-    }
-
-    /* WHAT WE LOOK FOR */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      border-radius: var(--radius-card);
-      border: 1px solid var(--border-subtle);
-      padding: 16px 16px 14px;
-      background: #ffffff;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-    }
-
-    .card-tag {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .card h3 {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .card p {
-      font-size: 0.86rem;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    /* WHAT WE DO */
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 26px;
-    }
-
-    .list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .list-item {
-      border-radius: 14px;
-      border: 1px solid var(--border-subtle);
-      padding: 10px 12px 8px;
-      background: #ffffff;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .list-item:hover {
-      transform: translateX(4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    }
-
-    .list-label {
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .list-title {
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-      font-weight: 600;
-    }
-
-    .list-body {
-      font-size: 0.84rem;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    /* JOIN / CTA */
-    .join-layout {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .join-card {
-      border-radius: var(--radius-card);
-      border: 1px solid var(--border-subtle);
-      padding: 16px 16px 14px;
-      background: #ffffff;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .join-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
-    }
-
-    .join-label {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--muted);
-    }
-
-    .join-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .join-text {
-      font-size: 0.86rem;
-      line-height: 1.7;
-      color: var(--muted);
-    }
-
-    .join-cta {
-      margin-top: 6px;
-      align-self: flex-start;
     }
 
     /* FOOTER */
     footer {
       border-top: 1px solid var(--border-subtle);
-      padding: 18px 0 22px;
-      font-size: 0.78rem;
+      padding: 24px 0;
+      font-size: 0.85rem;
       color: var(--muted);
     }
 
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
       justify-content: space-between;
     }
 
     .footer-links {
       display: flex;
-      gap: 10px;
+      gap: 16px;
       flex-wrap: wrap;
     }
 
@@ -519,46 +442,71 @@
     .footer-links a:hover,
     .footer-links a:focus {
       color: var(--fg);
-      text-decoration: underline;
       outline: none;
     }
 
     /* RESPONSIVE */
-    @media (max-width: 880px) {
-      .who-layout,
-      .two-col,
-      .join-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .cards-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        padding-inline: 16px;
-      }
-
+    @media (max-width: 768px) {
       .shell {
-        padding-inline: 16px;
+        padding-inline: 20px;
       }
 
-      .nav-links {
-        display: none;
-      }
-
-      .cards-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .nav {
+        padding: 16px 20px;
       }
 
       .hero {
-        padding-top: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
       }
 
       .hero-headline {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      .full-image-section {
+        height: 70vh;
+        min-height: 400px;
+      }
+
+      .text-block {
+        padding: 60px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .nav-cta {
+        font-size: 0.75rem;
+        padding: 7px 14px;
+      }
+
+      .who-section-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .believe-section-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .look-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .who-image,
+      .believe-image,
+      .look-image {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
       }
     }
 
@@ -568,8 +516,8 @@
       top: -40px;
       left: 0;
       background: var(--fg);
-      color: white;
-      padding: 8px;
+      color: var(--bg);
+      padding: 8px 16px;
       text-decoration: none;
       z-index: 100;
     }
@@ -592,13 +540,7 @@
             <div class="logo-line-sub">Partners</div>
           </div>
         </div>
-        <div class="nav-links">
-          <a class="nav-link" href="#who">Who we are</a>
-          <a class="nav-link" href="#look">What we look for</a>
-          <a class="nav-link" href="#do">What we do</a>
-          <a class="nav-link" href="#join">Join</a>
-        </div>
-        <a class="nav-cta" href="#join">Pitch now</a>
+        <a class="nav-cta" href="#join">Get in touch</a>
       </nav>
     </header>
 
@@ -606,181 +548,153 @@
       <div class="shell">
         <!-- HERO -->
         <section class="hero">
-          <div class="hero-eyebrow">Lorem ipsum</div>
           <h1 class="hero-headline">
-            We invest in material innovation reshaping how the world is built.
+            We invest in innovations reshaping how the world is built.
           </h1>
           <p class="hero-sub">
-            The future of construction - one building block at a time.
+            The future of industry—one innovation at a time.
           </p>
-          <div class="hero-ctas">
-            <a href="#join" class="btn btn-primary">Submit your deck</a>
-            <a href="#who" class="btn btn-secondary">Who we are</a>
+        </section>
+      </div>
+
+      <!-- FULL WIDTH IMAGE -->
+      <div class="full-image-section" role="img" aria-label="Hero image placeholder"></div>
+
+      <!-- TEXT BLOCK -->
+      <div class="shell">
+        <section class="text-block">
+          <div class="text-block-content">
+            <h2 class="text-block-title">
+              We don't fund the next product. We fund what products are made of.
+            </h2>
+            <p class="text-block-text">
+              The future of industry starts with better foundations—and the systems that scale them. We invest in the building blocks of tomorrow.
+            </p>
           </div>
-          <div class="hero-note">
-            Seed – Series A · Lorem ipsum · Dolor sit amet
+        </section>
+
+        <!-- WHAT WE BELIEVE IN -->
+        <section id="believe">
+          <div class="believe-section-content">
+            <div class="believe-text-content">
+              <div class="believe-intro">
+                <div class="section-eyebrow">What we believe in</div>
+                <h2 class="section-title">
+                  Our investment philosophy is built on core principles that guide every decision we make.
+                </h2>
+              </div>
+              
+              <div class="believe-grid">
+                <div class="believe-item">
+                  <h3>Industry as Enabler, not Enemy</h3>
+                  <p>
+                    Materialinnovation entsteht nicht im Vakuum. Wir glauben an Partnerschaften – nicht an den Mythos der „Disruption von außen".
+                  </p>
+                </div>
+
+                <div class="believe-item">
+                  <h3>Collaboration beats Speed</h3>
+                  <p>
+                    Bei neuen Materialien gewinnt nicht der Schnellste, sondern derjenige, der früh die richtigen Industriepartner in seine Skalierung einbaut: Pilotwerke, Prüfstände, Norm-Expertise, Produktionslinien. Schnelligkeit entsteht durch Kollaboration, nicht durch Isolation.
+                  </p>
+                </div>
+
+                <div class="believe-item">
+                  <h3>Resources matter - but intelligence unlocks them</h3>
+                  <p>
+                    Ja, der Besitz von Rohstoffen ist ein Wert – strategisch, ökonomisch, geopolitisch. Aber Wettbewerbsvorteile in der Zukunft entstehen erst dann, wenn man diese Ressourcen mit neuer Intelligenz nutzt: bessere Rezepturen, KI-gestützte Optimierung, niedrigere Emissionen, neue Anwendungen. Besitz ist die Basis. Intelligenz ist der Hebel.
+                  </p>
+                </div>
+
+                <div class="believe-item">
+                  <h3>Europe as the hardest playground - if you make it here, you can make it anywhere</h3>
+                  <p>
+                    Europa ist streng reguliert, emissionssensibel und politisch anspruchsvoll. Wer hier ein neues Material in den Markt bringt, ist global skalierungsfähig. Wir glauben: Europa ist kein Nachteil - es ist der härteste Qualitätsfilter der Welt.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="believe-image" role="img" aria-label="Placeholder image"></div>
           </div>
         </section>
 
         <!-- WHO WE ARE -->
         <section id="who">
-          <div class="section-header">
-            <div class="section-label">Who we are</div>
-            <h2 class="section-title">Lorem ipsum dolor sit amet.</h2>
-            <p class="section-intro">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo, libero vitae tincidunt
-              aliquet, nibh ipsum fermentum justo, sed euismod urna lorem sit amet risus.
-            </p>
-          </div>
-          <div class="section-body who-layout">
-            <div class="who-main">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
-                orci luctus et ultrices posuere cubilia curae; Nam fringilla, purus at convallis consequat, urna
-                lorem tincidunt lorem, eget pulvinar enim nibh sed nisi.
-              </p>
-              <p>
-                Sed vehicula, neque a convallis volutpat, nisl magna posuere lacus, a dapibus mauris lorem ac enim.
-                Proin nec lorem a augue lacinia faucibus. Vivamus at nisl non erat elementum hendrerit sed quis nibh.
-              </p>
-            </div>
-            <aside class="who-side">
-              <strong>Lorem ipsum dolor sit amet.</strong>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Integer mollis,
-                sapien et blandit posuere, ipsum urna tempus ante, sed dignissim tortor leo nec lectus.
-              </p>
-              <div class="who-pills">
-                <span class="pill pill-strong">Lorem ipsum</span>
-                <span class="pill">Dolor sit amet</span>
-                <span class="pill">Consectetur</span>
-                <span class="pill">Adipiscing elit</span>
+          <div class="who-section-content">
+            <div class="who-image" role="img" aria-label="Placeholder image"></div>
+            <div class="who-text-content">
+              <div class="who-intro">
+                <div class="section-eyebrow">Who we are</div>
+                <h2 class="section-title">
+                  Founded by visionary leaders, MINA Partners is a global investment syndicate bringing together an exclusive circle of executives, entrepreneurs, investors and industry experts.
+                </h2>
               </div>
-            </aside>
+              <div class="who-main">
+                <p>
+                  We're united by one goal: building smarter, more resilient systems for generations to come.
+                </p>
+                <p>
+                  We don't fund incremental improvements. We fund the foundational technologies that redefine entire industries—the infrastructure, materials, and systems that will shape the next century of human progress.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
         <!-- WHAT WE LOOK FOR -->
         <section id="look">
-          <div class="section-header">
-            <div class="section-label">What we look for</div>
-            <h2 class="section-title">Lorem ipsum across the value chain.</h2>
-            <p class="section-intro">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lectus non magna varius viverra.
-              Mauris ornare, justo eget eleifend tempor, ante nisl congue massa, sed pretium tortor dui sit amet odio.
-            </p>
-          </div>
-          <div class="section-body cards-grid">
-            <article class="card">
-              <div class="card-tag">Area one</div>
-              <h3>Lorem ipsum</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat libero nec mauris luctus,
-                at hendrerit augue interdum.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-tag">Area two</div>
-              <h3>Dolor sit amet</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo lacinia diam, et efficitur
-                erat tempus id.
-              </p>
-            </article>
-            <article class="card">
-              <div class="card-tag">Area three</div>
-              <h3>Consectetur</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam tincidunt dui, vel
-                mattis leo feugiat sit amet.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <!-- WHAT WE DO -->
-        <section id="do">
-          <div class="section-header">
-            <div class="section-label">What we do</div>
-            <h2 class="section-title">From lorem to ipsum.</h2>
-            <p class="section-intro">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor ex, pulvinar vitae massa sit amet,
-              sollicitudin tempor elit.
-            </p>
-          </div>
-          <div class="section-body two-col">
-            <div>
-              <ul class="list">
-                <li class="list-item">
-                  <div class="list-label">Service one</div>
-                  <div class="list-title">Lorem ipsum</div>
-                  <div class="list-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut odio at nisl cursus volutpat sit
-                    amet non erat.
-                  </div>
-                </li>
-                <li class="list-item">
-                  <div class="list-label">Service two</div>
-                  <div class="list-title">Dolor sit amet</div>
-                  <div class="list-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices.
-                  </div>
-                </li>
-              </ul>
+          <div class="section-eyebrow">What we look for</div>
+          <h2 class="section-title">
+            We focus on foundational innovation—the technologies redefining how things are made, and how they reach the world.
+          </h2>
+          
+          <div class="look-grid">
+            <div class="look-item">
+              <div class="look-image" role="img" aria-label="Placeholder image"></div>
+              <div class="look-content">
+                <h3>Deep Tech & Industrial Innovation</h3>
+                <p>
+                  We back early-stage startups in materials science, manufacturing innovation, supply chain infrastructure, and breakthrough industrial technologies. We invest in the systems that scale progress.
+                </p>
+              </div>
             </div>
-            <div>
-              <ul class="list">
-                <li class="list-item">
-                  <div class="list-label">Service three</div>
-                  <div class="list-title">Consectetur</div>
-                  <div class="list-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non risus tristique, mattis
-                    quam at, ullamcorper lacus.
-                  </div>
-                </li>
-                <li class="list-item">
-                  <div class="list-label">Service four</div>
-                  <div class="list-title">Adipiscing elit</div>
-                  <div class="list-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed accumsan sem, id dapibus
-                    dui.
-                  </div>
-                </li>
-              </ul>
+
+            <div class="look-item">
+              <div class="look-image" role="img" aria-label="Placeholder image"></div>
+              <div class="look-content">
+                <h3>Seed – Series A</h3>
+                <p>
+                  We invest early, backing exceptional founders from Seed to Series A. We partner with teams that have the technical depth and market vision to build category-defining companies.
+                </p>
+              </div>
+            </div>
+
+            <div class="look-item">
+              <div class="look-image" role="img" aria-label="Placeholder image"></div>
+              <div class="look-content">
+                <h3>Globally Ambitious</h3>
+                <p>
+                  We look for globally ambitious startups with a strong European anchor. We fund innovations that ripple across industries—spanning sectors, geographies, and value chains. Modern industry is interconnected, and so are the solutions we invest in.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- JOIN / CTA -->
         <section id="join">
-          <div class="section-header">
-            <div class="section-label">Join</div>
-            <h2 class="section-title">Join the lorem ipsum ecosystem.</h2>
-            <p class="section-intro">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat non justo vitae interdum.
-              Integer mattis venenatis dui, sed faucibus leo faucibus eget.
+          <div class="join-content">
+            <div class="section-eyebrow">Join us</div>
+            <h2 class="section-title">
+              Building the future together
+            </h2>
+            <p class="section-text">
+              Whether you're a founder with a breakthrough innovation or an investor looking to join our syndicate, we'd love to hear from you.
             </p>
-          </div>
-          <div class="section-body join-layout">
-            <article class="join-card">
-              <div class="join-label">For founders</div>
-              <div class="join-title">Submit your pitch deck</div>
-              <p class="join-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend, lorem quis porta dignissim,
-                neque tortor vehicula neque, sit amet dapibus dui nisl et lectus.
-              </p>
-              <a href="mailto:hello@mina.vc?subject=Pitch%20deck" class="btn btn-secondary join-cta">Submit</a>
-            </article>
-            <article class="join-card">
-              <div class="join-label">For investors</div>
-              <div class="join-title">Invest with MINA</div>
-              <p class="join-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel ipsum a mi scelerisque
-                gravida ac et tellus.
-              </p>
-              <a href="mailto:hello@mina.vc?subject=Invest" class="btn btn-secondary join-cta">Request details</a>
-            </article>
+            <div class="join-cta-wrapper">
+              <a href="mailto:hello@mina.vc?subject=Pitch%20Deck" class="btn btn-primary">Submit your deck</a>
+              <a href="mailto:hello@mina.vc?subject=Invest%20with%20MINA" class="btn btn-secondary">Invest with us</a>
+            </div>
           </div>
         </section>
       </div>
@@ -788,7 +702,7 @@
 
     <footer>
       <div class="footer-inner">
-        <span>&copy; <span id="year"></span> MINA.</span>
+        <span>&copy; <span id="year"></span> MINA Partners</span>
         <div class="footer-links">
           <a href="#privacy">Privacy</a>
           <a href="#accessibility">Accessibility</a>
