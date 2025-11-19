@@ -134,6 +134,33 @@
       outline: none;
     }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+      background: transparent;
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      border-color: var(--fg);
+      color: var(--fg);
+      outline: none;
+    }
+
     /* HERO */
     .hero {
       padding-top: 100px;
@@ -156,6 +183,10 @@
       color: var(--muted);
       max-width: 32rem;
       margin: 0 auto;
+    }
+
+    .hero-cta {
+      margin-top: 32px;
     }
 
     /* FULL WIDTH IMAGE */
@@ -237,7 +268,7 @@
       margin-top: 20px;
     }
 
-    /* WHAT WE BELIEVE IN */
+    /* CORE BELIEFS (was: What we believe in) */
     .believe-section-content {
       display: grid;
       grid-template-columns: 1fr 240px;
@@ -280,7 +311,93 @@
       object-fit: cover;
     }
 
-    /* WHO WE ARE */
+    /* WHAT WE INVEST IN */
+    .invest-section-content {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .invest-image {
+      width: 240px;
+      height: 320px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+      object-fit: cover;
+    }
+
+    .invest-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .invest-intro {
+      margin: 0;
+    }
+
+    .invest-grid {
+      display: grid;
+      gap: 48px;
+    }
+
+    .invest-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .invest-item p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* WHAT WE LOOK FOR */
+    .look-section-content {
+      display: grid;
+      grid-template-columns: 1fr 240px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .look-image {
+      width: 240px;
+      height: 320px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #d5d5d5 0%, #b5b5b5 100%);
+      object-fit: cover;
+    }
+
+    .look-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .look-intro {
+      margin: 0;
+    }
+
+    .look-grid {
+      display: grid;
+      gap: 48px;
+    }
+
+    .look-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .look-item p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* WHO WE ARE / WHY US */
     .who-section-content {
       display: grid;
       grid-template-columns: 240px 1fr;
@@ -314,40 +431,6 @@
 
     .who-main p + p {
       margin-top: 20px;
-    }
-
-    /* WHAT WE LOOK FOR */
-    .look-grid {
-      display: grid;
-      gap: 48px;
-      margin-top: 48px;
-    }
-
-    .look-item {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 32px;
-      align-items: start;
-    }
-
-    .look-image {
-      width: 140px;
-      height: 180px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #d5d5d5 0%, #b5b5b5 100%);
-      object-fit: cover;
-    }
-
-    .look-content h3 {
-      font-size: 1.3rem;
-      margin-bottom: 12px;
-      font-weight: 500;
-    }
-
-    .look-content p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--muted);
     }
 
     /* JOIN / CTA */
@@ -486,26 +569,32 @@
         padding: 7px 14px;
       }
 
-      .who-section-content {
+      .nav-links {
+        display: none;
+      }
+
+      .who-section-content,
+      .believe-section-content,
+      .invest-section-content,
+      .look-section-content {
         grid-template-columns: 1fr;
         gap: 24px;
       }
 
-      .believe-section-content {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .look-item {
+      .look-item,
+      .invest-item {
         grid-template-columns: 1fr;
         gap: 20px;
       }
 
       .who-image,
       .believe-image,
-      .look-image {
+      .look-image,
+      .invest-image {
         width: 100%;
         max-width: 200px;
+        height: 250px;
+        min-height: auto;
         margin: 0 auto;
       }
     }
@@ -540,6 +629,13 @@
             <div class="logo-line-sub">Partners</div>
           </div>
         </div>
+        <div class="nav-links">
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#why">Who we are</a>
+          <a class="nav-link" href="#look">What we look for</a>
+          <a class="nav-link" href="#invest">What we invest in</a>
+          <a class="nav-link" href="#why">Why us</a>
+        </div>
         <a class="nav-cta" href="#join">Get in touch</a>
       </nav>
     </header>
@@ -554,6 +650,9 @@
           <p class="hero-sub">
             The future of construction. One input at a time.
           </p>
+          <div class="hero-cta">
+            <a href="mailto:hello@mina.vc?subject=Pitch%20Deck" class="btn btn-primary">Submit your pitch deck</a>
+          </div>
         </section>
       </div>
 
@@ -565,7 +664,7 @@
         <section class="text-block">
           <div class="text-block-content">
             <h2 class="text-block-title">
-              We don't fund infrastructure. We fund what infrastrucutre is made of.
+              We don't fund infrastructure. We fund what infrastructure is made of.
             </h2>
             <p class="text-block-text">
               The future of our infrastructure starts with better inputs, and the systems that scale them.
@@ -573,12 +672,12 @@
           </div>
         </section>
 
-        <!-- WHAT WE BELIEVE IN -->
-        <section id="believe">
+        <!-- 1. CORE BELIEFS -->
+        <section id="beliefs">
           <div class="believe-section-content">
             <div class="believe-text-content">
               <div class="believe-intro">
-                <div class="section-eyebrow">What we believe in</div>
+                <div class="section-eyebrow">Core Beliefs</div>
                 <h2 class="section-title">
                   Our core beliefs guide every decision we make.
                 </h2>
@@ -595,12 +694,12 @@
                 <div class="believe-item">
                   <h3>Distribution wins</h3>
                   <p>
-                    Faster development only gets you so far. Success comes from collaboration. 
+                    Faster development only gets you so far. Success comes from collaboration.
                   </p>
                 </div>
 
                 <div class="believe-item">
-                  <h3>Europe is the hardest test environment. And that’s an advantage.</h3>
+                  <h3>Europe is the hardest test environment. And that's an advantage.</h3>
                   <p>
                     Brutal regulation. Strict norms. High sustainability pressure. If you make it here, you can make it anywhere.
                   </p>
@@ -618,60 +717,106 @@
           </div>
         </section>
 
-        <!-- WHO WE ARE -->
-        <section id="who">
-          <div class="who-section-content">
-            <div class="who-image" role="img" aria-label="Placeholder image"></div>
-            <div class="who-text-content">
-              <div class="who-intro">
-                <div class="section-eyebrow">Who we are</div>
+        <!-- 2. WHAT WE INVEST IN -->
+        <section id="invest">
+          <div class="invest-section-content">
+            <div class="invest-image" role="img" aria-label="Placeholder image"></div>
+            <div class="invest-text-content">
+              <div class="invest-intro">
+                <div class="section-eyebrow">What we invest in</div>
                 <h2 class="section-title">
-                  Founded by Person 1, Person 2 and Person 3, MINA Partners is a global investment syndicate bringing together an exclusive circle of executives, entrepreneurs, investors and industry experts.
+                  Materialfelder und Technologien
                 </h2>
               </div>
-              <div class="who-main">
-                <p>
-                  We're united by one goal: building smarter, more resilient systems for generations to come.
-                </p>
-                <p>
-                  We don't fund incremental improvements. We fund the foundational technologies that redefine entire industries - the materials and systems that will shape the next century of human progress.
-                </p>
+              
+              <div class="invest-grid">
+                <div class="invest-item">
+                  <h3>New binders & cements</h3>
+                  <p>
+                    AI-designed formulations, low-carbon processes, geopolymer systems.
+                  </p>
+                </div>
+
+                <div class="invest-item">
+                  <h3>Bio-based engineered materials</h3>
+                  <p>
+                    Mycelium, algae, hemp — but engineered for industrial performance.
+                  </p>
+                </div>
+
+                <div class="invest-item">
+                  <h3>Engineered recycling</h3>
+                  <p>
+                    AI-enabled sorting, chemistry & processing that turn waste into primary-quality ingredients.
+                  </p>
+                </div>
+
+                <div class="invest-item">
+                  <h3>Performance-enhanced materials</h3>
+                  <p>
+                    Self-healing, adaptive or sensor-enabled materials with real industrial pathways.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- WHAT WE LOOK FOR -->
+        <!-- 3. WHAT WE LOOK FOR -->
         <section id="look">
-          <div class="section-eyebrow">What we look for</div>
-          
-          <div class="look-grid">
-            <div class="look-item">
-              <div class="look-image" role="img" aria-label="Placeholder image"></div>
-              <div class="look-content">
-                <h3>AI based MaterialTech</h3>
-                <p>
-                  We back early-stage startups in materials science, manufacturing innovation, supply chain infrastructure, and breakthrough industrial technologies. We invest in the systems that scale progress.
-                </p>
+          <div class="look-section-content">
+            <div class="look-text-content">
+              <div class="look-intro">
+                <div class="section-eyebrow">What we look for</div>
+                <h2 class="section-title">
+                  Teams und Reifegrade
+                </h2>
+              </div>
+              
+              <div class="look-grid">
+                <div class="look-item">
+                  <h3>Early-stage, research-born teams</h3>
+                  <p>
+                    Smart engineers from universities & labs.
+                  </p>
+                </div>
+
+                <div class="look-item">
+                  <h3>Real material science, not slides</h3>
+                  <p>
+                    Chemistry, structure, processes — genuine depth.
+                  </p>
+                </div>
+
+                <div class="look-item">
+                  <h3>Built for industry adoption</h3>
+                  <p>
+                    Path to certification, validation, pilot plants.
+                  </p>
+                </div>
               </div>
             </div>
+            <div class="look-image" role="img" aria-label="Placeholder image"></div>
+          </div>
+        </section>
 
-            <div class="look-item">
-              <div class="look-image" role="img" aria-label="Placeholder image"></div>
-              <div class="look-content">
-                <h3>Seed – Series A</h3>
-                <p>
-                  We invest earlyinto things straight form the lab. Corporate spin-offs, university spin-offs We partner with teams that have the technical depth and market vision to build category-defining companies.
-                </p>
+        <!-- 4. WHY US -->
+        <section id="why">
+          <div class="who-section-content">
+            <div class="who-image" role="img" aria-label="Placeholder image"></div>
+            <div class="who-text-content">
+              <div class="who-intro">
+                <div class="section-eyebrow">Why us</div>
+                <h2 class="section-title">
+                  Warum gerade wir dieses Modell betreiben können
+                </h2>
               </div>
-            </div>
-
-            <div class="look-item">
-              <div class="look-image" role="img" aria-label="Placeholder image"></div>
-              <div class="look-content">
-                <h3>Globally Ambitious</h3>
+              <div class="who-main">
                 <p>
-                  We look for globally ambitious startups with a strong European anchor. We fund innovations that ripple across industries—spanning sectors, geographies, and value chains. Modern industry is interconnected, and so are the solutions we invest in.
+                  Erster Absatz über unsere einzigartige Position und Fähigkeiten.
+                </p>
+                <p>
+                  Zweiter Absatz über unseren Hintergrund, Netzwerk und Track Record.
                 </p>
               </div>
             </div>
