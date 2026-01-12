@@ -187,6 +187,10 @@
 
     .hero-cta {
       margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     /* FULL WIDTH IMAGE */
@@ -268,7 +272,7 @@
       margin-top: 20px;
     }
 
-    /* CORE BELIEFS (was: What we believe in) */
+    /* CORE BELIEFS */
     .believe-section-content {
       display: grid;
       grid-template-columns: 1fr 240px;
@@ -305,10 +309,12 @@
 
     .believe-image {
       width: 240px;
-      height: 320px;
+      height: 100%;
+      min-height: 320px;
       border-radius: 8px;
       background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
       object-fit: cover;
+      align-self: stretch;
     }
 
     /* WHAT WE INVEST IN */
@@ -321,10 +327,12 @@
 
     .invest-image {
       width: 240px;
-      height: 320px;
+      height: 100%;
+      min-height: 320px;
       border-radius: 8px;
       background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
       object-fit: cover;
+      align-self: stretch;
     }
 
     .invest-text-content {
@@ -364,10 +372,12 @@
 
     .look-image {
       width: 240px;
-      height: 320px;
+      height: 100%;
+      min-height: 320px;
       border-radius: 8px;
       background: linear-gradient(135deg, #d5d5d5 0%, #b5b5b5 100%);
       object-fit: cover;
+      align-self: stretch;
     }
 
     .look-text-content {
@@ -397,15 +407,15 @@
       color: var(--muted);
     }
 
-    /* WHO WE ARE / WHY US */
-    .who-section-content {
+    /* WHY US */
+    .why-section-content {
       display: grid;
       grid-template-columns: 240px 1fr;
       gap: 48px;
       align-items: start;
     }
 
-    .who-image {
+    .why-image {
       width: 240px;
       height: 320px;
       border-radius: 8px;
@@ -413,24 +423,31 @@
       object-fit: cover;
     }
 
-    .who-text-content {
+    .why-text-content {
       display: flex;
       flex-direction: column;
       gap: 24px;
     }
 
-    .who-intro {
+    .why-intro {
       margin: 0;
     }
 
-    .who-main {
+    .why-grid {
+      display: grid;
+      gap: 48px;
+    }
+
+    .why-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .why-item p {
       font-size: 1.05rem;
       line-height: 1.8;
       color: var(--muted);
-    }
-
-    .who-main p + p {
-      margin-top: 20px;
     }
 
     /* JOIN / CTA */
@@ -573,28 +590,21 @@
         display: none;
       }
 
-      .who-section-content,
       .believe-section-content,
       .invest-section-content,
-      .look-section-content {
+      .look-section-content,
+      .why-section-content {
         grid-template-columns: 1fr;
         gap: 24px;
       }
 
-      .look-item,
-      .invest-item {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .who-image,
       .believe-image,
       .look-image,
-      .invest-image {
+      .invest-image,
+      .why-image {
         width: 100%;
         max-width: 200px;
         height: 250px;
-        min-height: auto;
         margin: 0 auto;
       }
     }
@@ -623,9 +633,8 @@
     <header>
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-left">
-          <div class="logo-mark" aria-hidden="true"></div>
           <div class="logo-text">
-            <div class="logo-line-main">MINA</div>
+            <div class="logo-line-main">INPUT</div>
             <div class="logo-line-sub">Partners</div>
           </div>
         </div>
@@ -645,13 +654,14 @@
         <!-- HERO -->
         <section class="hero">
           <h1 class="hero-headline">
-            We invest in innovations reshaping how the world is built.
+            We invest in materials reshaping how the world is built.
           </h1>
           <p class="hero-sub">
             The future of construction. One input at a time.
           </p>
           <div class="hero-cta">
             <a href="mailto:hello@mina.vc?subject=Pitch%20Deck" class="btn btn-primary">Submit your pitch deck</a>
+            <a href="mailto:hello@mina.vc?subject=Invest%20with%20INPUT" class="btn btn-secondary">Invest with us</a>
           </div>
         </section>
       </div>
@@ -667,7 +677,7 @@
               We don't fund infrastructure. We fund what infrastructure is made of.
             </h2>
             <p class="text-block-text">
-              Because lasting change in the built world starts with material inputs. And the systems that scale them.
+              The future of our infrastructure starts with better inputs, and the systems that scale them.
             </p>
           </div>
         </section>
@@ -679,7 +689,7 @@
               <div class="believe-intro">
                 <div class="section-eyebrow">Core Beliefs</div>
                 <h2 class="section-title">
-                  Material development is no longer a linear, decade-long process. AI-driven simulation and formulation compress development cycles from years to months, shifting innovation from products to inputs.
+                  Our core beliefs guide every decision we make.
                 </h2>
               </div>
               
@@ -692,9 +702,9 @@
                 </div>
 
                 <div class="believe-item">
-                  <h3>Distribution wins</h3>
+                  <h3>Materials don't scale alone.</h3>
                   <p>
-                    Faster development only gets you so far. Success comes from collaboration.
+                    Faster development is meaningless without access to industrial partners, supply chains, and integration pathways.
                   </p>
                 </div>
 
@@ -702,13 +712,6 @@
                   <h3>Europe is the hardest test environment. And that's an advantage.</h3>
                   <p>
                     Brutal regulation. Strict norms. High sustainability pressure. If you make it here, you can make it anywhere.
-                  </p>
-                </div>
-
-                <div class="believe-item">
-                  <h3>Europe generates IP. The US commercializes.</h3>
-                  <p>
-                    Europe = science, labs, patents. The US = capital, speed, risk appetite. Teams who have both, increase their chances of winning.
                   </p>
                 </div>
               </div>
@@ -724,37 +727,27 @@
             <div class="invest-text-content">
               <div class="invest-intro">
                 <div class="section-eyebrow">What we invest in</div>
-                <h2 class="section-title">
-                  Materialfelder und Technologien
-                </h2>
               </div>
               
               <div class="invest-grid">
                 <div class="invest-item">
-                  <h3>New binders & cements</h3>
+                  <h3>Input Innovation</h3>
                   <p>
-                    AI-designed formulations, low-carbon processes, geopolymer systems.
+                    Novel material inputs at the substance level. We invest in new formulations, binders, additives, and substitutes for primary raw materials - redefining performance, cost, and carbon before products exist.
                   </p>
                 </div>
 
                 <div class="invest-item">
-                  <h3>Bio-based engineered materials</h3>
+                  <h3>Input Infrastructure</h3>
                   <p>
-                    Mycelium, algae, hemp — but engineered for industrial performance.
+                    Technologies that make new inputs industrially viable. Processing, activation, blending, and retrofit-ready systems that integrate with existing production assets and enable scale.
                   </p>
                 </div>
 
                 <div class="invest-item">
-                  <h3>Engineered recycling</h3>
+                  <h3>Input-Led Applications</h3>
                   <p>
-                    AI-enabled sorting, chemistry & processing that turn waste into primary-quality ingredients.
-                  </p>
-                </div>
-
-                <div class="invest-item">
-                  <h3>Performance-enhanced materials</h3>
-                  <p>
-                    Self-healing, adaptive or sensor-enabled materials with real industrial pathways.
+                    Applications where the input is the advantage. We invest selectively in applications that validate, certify, and accelerate adoption of proprietary material inputs under real-world conditions.
                   </p>
                 </div>
               </div>
@@ -768,9 +761,6 @@
             <div class="look-text-content">
               <div class="look-intro">
                 <div class="section-eyebrow">What we look for</div>
-                <h2 class="section-title">
-                  Teams und Reifegrade
-                </h2>
               </div>
               
               <div class="look-grid">
@@ -800,25 +790,21 @@
           </div>
         </section>
 
-        <!-- 4. WHY US -->
-        <section id="why">
-          <div class="who-section-content">
-            <div class="who-image" role="img" aria-label="Placeholder image"></div>
-            <div class="who-text-content">
-              <div class="who-intro">
-                <div class="section-eyebrow">Why us</div>
+        <!-- 4. WHO WE ARE -->
+        <section id="who">
+          <div class="why-section-content">
+            <div class="why-image" role="img" aria-label="Placeholder image"></div>
+            <div class="why-text-content">
+              <div class="why-intro">
+                <div class="section-eyebrow">Who we are</div>
                 <h2 class="section-title">
-                  Warum gerade wir dieses Modell betreiben können
+                  Founded by Philipp & Felix, INPUT Partners is a deal-by-deal investment syndicate bringing together an exclusive circle of executives, entrepreneurs, investors and industry experts.
                 </h2>
               </div>
-              <div class="who-main">
-                <p>
-                  Erster Absatz über unsere einzigartige Position und Fähigkeiten.
-                </p>
-                <p>
-                  Zweiter Absatz über unseren Hintergrund, Netzwerk und Track Record.
-                </p>
-              </div>
+              
+              <p style="font-size: 1.05rem; line-height: 1.8; color: var(--muted);">
+                We're united by one goal: building smarter, more resilient materials for generations to come.
+              </p>
             </div>
           </div>
         </section>
@@ -835,7 +821,7 @@
             </p>
             <div class="join-cta-wrapper">
               <a href="mailto:hello@mina.vc?subject=Pitch%20Deck" class="btn btn-primary">Submit your deck</a>
-              <a href="mailto:hello@mina.vc?subject=Invest%20with%20MINA" class="btn btn-secondary">Invest with us</a>
+              <a href="mailto:hello@mina.vc?subject=Invest%20with%20INPUT" class="btn btn-secondary">Invest with us</a>
             </div>
           </div>
         </section>
@@ -844,7 +830,7 @@
 
     <footer>
       <div class="footer-inner">
-        <span>&copy; <span id="year"></span> MINA Partners</span>
+        <span>&copy; <span id="year"></span> INPUT Partners</span>
         <div class="footer-links">
           <a href="#privacy">Privacy</a>
           <a href="#accessibility">Accessibility</a>
